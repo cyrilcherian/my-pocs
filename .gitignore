@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+/**/*.js
+/**/*.js.map
+!gulpfile.js
+!dev.js
+!prod.js
+!systemjs.config.js
