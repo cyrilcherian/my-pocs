@@ -7,4 +7,4 @@ import { AppModuleB } from './app/app.module.type2';
 if (environment.production) {
   enableProdMode();
 }
-platformBrowserDynamic().bootstrapModule(AppModuleB);
+platformBrowserDynamic().bootstrapModule(AppModuleA);
