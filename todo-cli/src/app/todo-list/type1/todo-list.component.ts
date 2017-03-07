@@ -10,17 +10,19 @@ import {
 import {TaskService} from "../../core/task/task-service";
 import {UserService} from "../../core/user/user-service";
 import {Router} from "@angular/router";
-
+import {TodoListBase} from "../todo-list.base"
 @Component({
     selector: 'todo-list',
     templateUrl: "todo-list.component.html",
     styleUrls: [ 'todo-list.component.css']
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent extends TodoListBase implements OnInit {
     tasks: Array<any>;
     users: Array<any>;
     selected: any;
-    constructor(private taskService: TaskService, private userService: UserService, private router: Router) { }
+    constructor(public taskService: TaskService, public userService: UserService, public router: Router) {
+      super(taskService, userService, router);
+    }
     ngOnInit() {
         this.taskService.getAll().subscribe(data => this.tasks = data as Array<any>);
         this.userService.getAll().subscribe(data => {
@@ -34,20 +36,4 @@ export class TodoListComponent implements OnInit {
     onClick(task) {
         this.router.navigate(['/todo-edit', task.id]);
     }
-    create() {
-        this.router.navigate(['/todo-create']);
-    }
-    userSelected() {
-        this.taskService.getAll().subscribe(data => {
-          let tasks = data as Array<any>;
-          if (this.selected.id == 0) {
-            this.tasks = tasks;
-            return;
-          }
-          this.tasks = tasks.filter((task) => {
-            return task.user_id == this.selected.id;
-          });
-        });
-    }
-
 }
