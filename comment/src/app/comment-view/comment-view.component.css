@@ -1,0 +1,30 @@
+.main-container {
+  width: 420px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.05);
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.main-image {
+  width: 50px;
+  min-height: 50px;
+}
+
+.flex-container {
+  margin-left: 10px;
+}
+
+.comment-author {
+  font-weight: 700;
+  font-size: 1.2rem
+}
+
+.comment-date {
+  color: #ccc;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}

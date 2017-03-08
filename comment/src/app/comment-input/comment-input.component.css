@@ -1,0 +1,36 @@
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-container {
+  width: 420px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-container {
+  width: 415px;
+  height: 100px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+
+.input {
+  margin-top: 10px;
+  width: 400px;
+  font-family: monospace;
+  resize: none;
+}
+button {
+  margin-right: 10px;
+}
+textarea {
+  height: 100px;
+}
+
+input {
+}

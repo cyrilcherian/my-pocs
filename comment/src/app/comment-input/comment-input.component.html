@@ -1,0 +1,24 @@
+<app-comment-list></app-comment-list>
+<h1 class="flex-header">Submit a Comment</h1>
+<form [formGroup]="myForm">
+  <div class="flex-container flex-start">
+    <input name="email" id="email" [formControl]="email" [(ngModel)]="data.user_id" placeholder="Email (Required)" class="input" />
+    <div [hidden]="email.valid || email.untouched">
+      <div [hidden]="!email.hasError('pattern')">
+        Inavlid email.
+      </div>
+      <div [hidden]="!email.hasError('required')">
+        Email is required.
+      </div>
+    </div>
+    <textarea name="comment" id="comment" [formControl]="comment" [(ngModel)]="data.comment" placeholder="Your Cool Message (Required)" class="input" rows="12" cols="50"></textarea>
+    <div [hidden]="comment.valid || comment.untouched">
+      <div [hidden]="!comment.hasError('required')">
+        Comment is required.
+      </div>
+    </div>
+  </div>
+  <div class="reply-container">
+    <button [disabled]="myForm.invalid" (click)="addComment()">Comment</button>
+  </div>
+</form>

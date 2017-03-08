@@ -1,0 +1,14 @@
+.flex-start {
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-container {
+  width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.flex-header {
+  width: 420px;
+  text-align: center;
+}

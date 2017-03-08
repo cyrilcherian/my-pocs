@@ -45,6 +45,7 @@ export class ToDoCreate {
         this.taskService.add(this.task).subscribe((d) => this.router.navigate(['/todo-list']));
     }
     userSelected($event) {
-        console.log(this.selected);
+        if(!this.myForm.invalid)
+          console.log(this.selected);
     }
 }
