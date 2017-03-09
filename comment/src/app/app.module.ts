@@ -9,22 +9,24 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentViewComponent } from './comment-view/comment-view.component';
 import { CommentService } from './core/comment/comment.service';
 import {Gravatar} from 'ng2-gravatar-directive';
+import {Store, provideStore} from '@ngrx/store';
+import { comment } from './store/store';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentInputComponent,
-    CommentListComponent,
     CommentViewComponent,
+    CommentListComponent,
     Gravatar
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [CommentService],
+  providers: [CommentService,  provideStore({comment})],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

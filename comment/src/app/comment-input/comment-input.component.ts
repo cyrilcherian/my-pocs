@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {  FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { CommentService } from '../core/comment/comment.service';
+import {Store} from '@ngrx/store';
 @Component({
   selector: 'app-comment-input',
   templateUrl: './comment-input.component.html',
@@ -14,7 +15,8 @@ export class CommentInputComponent implements OnInit {
     comment: this.comment,
     email: this.email
   });
-  constructor(private builder : FormBuilder, private commentService: CommentService) { }
+  constructor(private builder : FormBuilder, private commentService: CommentService,  private _store: Store<any>) {
+  }
 
   ngOnInit() {
   }
