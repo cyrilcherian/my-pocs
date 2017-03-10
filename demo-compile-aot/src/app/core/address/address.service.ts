@@ -12,7 +12,7 @@ export class AddressService {
   getHTML() {
       let p = new Promise((resolve) =>
           setTimeout(() => {
-              let html = "<div><app-address></app-address></div>";
+              let html = "<div><app-address></app-address><app-address-link name ='Cyril'></app-address-link></div>";
               resolve(html)
           }, 5000)
       )

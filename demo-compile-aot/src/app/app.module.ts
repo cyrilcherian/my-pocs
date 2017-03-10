@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { AddressComponent } from './address/address.component';
 import { InjectAddressComponent } from './inject-address/inject-address.component';
 import { AddressService } from './core/address/address.service';
+import { AddressLinkComponent } from './address-link/address-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddressComponent,
-    InjectAddressComponent
+    InjectAddressComponent,
+    AddressLinkComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { AddressService } from './core/address/address.service';
     DynamicHTMLModule.forRoot({
       components: [
         { component: AddressComponent, selector: 'app-address' },
+        { component: AddressLinkComponent, selector: 'app-address-link' },
       ]
     })
   ],
