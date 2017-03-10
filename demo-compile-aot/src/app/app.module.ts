@@ -9,13 +9,15 @@ import { AddressComponent } from './address/address.component';
 import { InjectAddressComponent } from './inject-address/inject-address.component';
 import { AddressService } from './core/address/address.service';
 import { AddressLinkComponent } from './address-link/address-link.component';
+import { AddressHeadingComponent } from './address-heading/address-heading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddressComponent,
     InjectAddressComponent,
-    AddressLinkComponent
+    AddressLinkComponent,
+    AddressHeadingComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { AddressLinkComponent } from './address-link/address-link.component';
       components: [
         { component: AddressComponent, selector: 'app-address' },
         { component: AddressLinkComponent, selector: 'app-address-link' },
+        { component: AddressHeadingComponent, selector: 'app-address-heading' },
       ]
     })
   ],
