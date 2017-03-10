@@ -15,3 +15,5 @@ ng serve
 
 ## prod
 ng serve --prod
+
+npm install --save ng-dynamic
