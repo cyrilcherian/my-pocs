@@ -14,7 +14,6 @@ export class AddressComponent implements OnInit, OnMount {
   ngOnInit() { }
 
   dynamicOnMount(attr: Map<string, string>, innerHTML: string, el: any) {
-    console.log("yes called", innerHTML);
     this.innerContent.nativeElement.innerHTML = innerHTML;
   }
 

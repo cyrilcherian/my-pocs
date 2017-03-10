@@ -41,4 +41,11 @@ gulp.task('backup', shell.task([
   'ln -s $PWD/node_modules dist0/node_modules',
   'cp *.*  dist0',
   'cp -r .[a-zA-Z0-9]* dist0'
+  'cp karma.conf.js dist0',
+  'cp package.json dist0',
+  'cp protractor.conf.js dist0',
+  'cp tsconfig.json dist0',
+  'cp tslint.json dist0',
+  'cp -r .angular-cli.json dist0',
+  'cp -r .editorconfig dist0'
 ]));

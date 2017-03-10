@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./address-heading.component.css']
 })
 export class AddressHeadingComponent implements OnInit {
-
+  errorCount = -10;
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  doClick(){
+    console.log("hello you clicked");
+  }
 }

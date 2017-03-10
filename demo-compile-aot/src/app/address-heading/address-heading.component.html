@@ -1,3 +1,5 @@
 <p>
-  <b>address-heading works!</b>
+  <b (click)="doClick()">address-heading works!</b>
+  <b *ngIf="errorCount > 0" >address-heading with if works!</b>
+  {{errorCount}}
 </p>
