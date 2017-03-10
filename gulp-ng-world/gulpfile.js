@@ -1,9 +1,10 @@
 "use strict";
 
-var gulp = require('gulp');
-var htmlMin = require('gulp-htmlmin');
-var replace = require('gulp-batch-replace');
-const shell = require('gulp-shell')
+const gulp = require('gulp');
+const htmlMin = require('gulp-htmlmin');
+const replace = require('gulp-batch-replace');
+const shell = require('gulp-shell');
+const strip = require('gulp-strip-comments');
 
 gulp.task('replace', ['backup'], function(done) {
     var json = require('./replacements.json');
@@ -17,9 +18,16 @@ gulp.task('replace', ['backup'], function(done) {
 
 gulp.task('build-prod', ['replace'], shell.task([
   '(cd dist0;ng build --prod --aot=false;cd ..;)',
-  'mv dist0/dist dist',
+  'rm -fr dist',
+  'mv dist0/dist .',
   'rm -fr dist0'
 ]));
+
+gulp.task('make-prod', ['build-prod'], function () {
+  return gulp.src('dist/*.js', { base: "./" })
+    .pipe(strip())
+    .pipe(gulp.dest('.'));
+});
 
 gulp.task('build-dev', ['devReplace'], shell.task([
   '(cd dist0;ng serve --prod;)'

@@ -5,10 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project is a POC for GULP + ng
 
 ## To build.
-ng build
+TODO
 
 ### Prod
-ng build-prod
+ng make-prod
 Then go to dist and do python -m SimpleHTTPServer 8000
 
 ## To serve.
