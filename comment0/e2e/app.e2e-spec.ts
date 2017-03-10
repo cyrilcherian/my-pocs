@@ -1,10 +1,10 @@
-import { CommentPage } from './app.po';
+import { Comment0Page } from './app.po';
 
-describe('comment App', function() {
-  let page: CommentPage;
+describe('comment0 App', () => {
+  let page: Comment0Page;
 
   beforeEach(() => {
-    page = new CommentPage();
+    page = new Comment0Page();
   });
 
   it('should display message saying app works', () => {

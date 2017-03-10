@@ -14,7 +14,7 @@ export class TaskService {
     constructor(private http: Http) { }
     getAll() {
         let p = new Promise((resolve) =>
-            setTimeout(() => resolve(this.tasks), 500)
+            setTimeout(() => resolve(this.tasks), 100)
         )
         return Observable.fromPromise(p).map((responseData) => {
             return responseData;

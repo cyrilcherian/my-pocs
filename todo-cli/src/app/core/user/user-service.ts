@@ -14,7 +14,7 @@ export class UserService {
     constructor(private http: Http) { }
     getAll() {
         let p = new Promise((resolve) =>
-            setTimeout(() => resolve(this.users), 500)
+            setTimeout(() => resolve(this.users), 100)
         )
         return Observable.fromPromise(p).map((responseData) => {
             return responseData;
@@ -25,7 +25,7 @@ export class UserService {
             setTimeout(() => {
                 let user = this.users.find((d) => { return d.id == id });
                 resolve(user)
-            }, 500)
+            }, 100)
         )
         return Observable.fromPromise(p).map((responseData) => {
             return responseData;
