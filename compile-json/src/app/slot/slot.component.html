@@ -1,0 +1,6 @@
+<div *ngFor="let item of html.slot_linklist; trackBy: index">
+  <div [ngSwitch]="getKey(item)">
+    <app-slot-link *ngSwitchCase="'slot_link'"  [slotlink]="item"></app-slot-link>
+    <app-slot-image *ngSwitchCase="'slot_image'"  [imagelink]="item"></app-slot-image>
+  </div>
+</div>
