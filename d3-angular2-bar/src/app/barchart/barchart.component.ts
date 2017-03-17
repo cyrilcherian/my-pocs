@@ -22,7 +22,6 @@ export class BarchartComponent implements OnInit {
 
   ngOnInit() {
     this.barService.myData().subscribe(data => {
-      console.log(data)
       this.createChart(data);
     })
   }
@@ -55,7 +54,7 @@ export class BarchartComponent implements OnInit {
     svg.selectAll(".bar")
       .data(data)
       .enter().append("rect")
-      .attr("class", "bar")
+      .classed("bar", true)
       .attr("x", function(d: any) { return x(d.salesperson); })
       .attr("width", x.bandwidth())
       .attr("y", function(d: any) { return y(d.sales); })
@@ -63,7 +62,7 @@ export class BarchartComponent implements OnInit {
 
     // add the x Axis
     svg.append("g")
-      .attr("transform", "translate(0," + this.height + ")")
+      .attr("transform", `translate(0,${this.height})`)
       .call(d3.axisBottom(x));
 
     // add the y Axis
