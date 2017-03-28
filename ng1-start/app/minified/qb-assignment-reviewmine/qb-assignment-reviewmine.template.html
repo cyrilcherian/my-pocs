@@ -1,7 +1,0 @@
-<md-list class="review-mine" class="question-display-list"><md-list-item ng-repeat="question in $ctrl.assignment.items" class="question-display-list__item"><span class="question-display-list__text"><h3>{{question.customId | numberFixedLen:5}}</h3><p>{{question.stem + " " + question.question | htmlFilter}}</p></span><span>{{$ctrl.getMyReview(question.id)}}</span><div ng-if="($ctrl.isComplete() || $ctrl.isSubmitted())"><md-button class="md-primary md-raised" aria-label="View" ng-click="$ctrl.previewQuestion($event, question)">View Question</md-button></div><div ng-if="(!$ctrl.isComplete() && !$ctrl.isSubmitted())"><md-button class="md-primary md-raised" aria-label="View" ng-click="$ctrl.showQuestion($event, question)">Review Now</md-button><!-- 
-            <md-button class="md-icon-button" aria-label="Comment" ng-show="$ctrl.getMyReview(question.id) == 'DONE'" ng-click="$ctrl.showThisReview($event, question)">
-            <md-tooltip md-direction="top">Comment</md-tooltip>
-            <ng-md-icon icon="comment"></ng-md-icon>
-            </md-icon>
-            </md-button>
-            --></div><md-divider></md-divider></md-list-item></md-list>
