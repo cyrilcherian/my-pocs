@@ -1,0 +1,1 @@
+<md-radio-group ng-model="$ctrl.selectedLevel" ng-change="$ctrl.levelSelected($ctrl.selectedLevel)" flex><div ng-repeat="level in $ctrl.data"><span class="md-padding"><md-radio-button ng-value="level.id" class="md-primary" aria-label="{{level.id}}">{{level.name}}</md-radio-button></span><md-divider></md-divider></div></md-radio-group>

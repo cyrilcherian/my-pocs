@@ -1,0 +1,9 @@
+<md-menu md-position-mode="target-right target" ng-if="$ctrl.menuItems.length > 0"><md-button aria-label="menu" class="md-icon-button" ng-click="$mdOpenMenu($event)"><ng-md-icon icon="more_vert"></ng-md-icon></md-button><md-menu-content width="4"><!--
+
+         <md-menu-item show-xs hide-gt-xs ng-repeat="option in $ctrl.moreItems" ng-if="$ctrl.section === 'create-que' || $ctrl.section === 'edit-question'">
+            <md-button ng-click="option.action($event, $index)">
+                <div layout="row">
+                    <p flex>{{option.item}}</p>
+                </div>
+            </md-button>
+        </md-menu-item>--><md-menu-item ng-hide="($ctrl.section === 'create-que')" ng-repeat="option in $ctrl.menuItems"><md-button ng-click="$ctrl.menuItemClick(option, $event)"><div layout="row"><p flex>{{option.item}}</p></div></md-button></md-menu-item></md-menu-content></md-menu>

@@ -1,0 +1,119 @@
+// ---------------------------------------------------------------------------
+// Login
+
+
+.login {
+    padding: 1rem 0;
+
+    @media (min-width: $layout-breakpoint-xs) { xbackground-color: beige;  width:22rem;} //600px & greater
+    @media (min-width: $layout-breakpoint-sm) { xbackground-color: red; padding:0; width:25rem;} //960px & greater
+    @media (min-width: $layout-breakpoint-md) { xbackground-color: blue; width:25rem;} //1280px & greater
+
+
+    &__row{  height: 100%; }
+    &__col{ width: 100%; 
+
+
+            &--image{ 
+
+                @media (min-width: $layout-breakpoint-sm) { 
+                    background: url(app/resources/images/client-login-hero.jpg) center no-repeat ;
+                    background-size: cover;
+                    position: relative;
+
+                    &:after{ 
+                        content: "";
+                        background: linear-gradient(to right,  rgba(0,0,0,.3) 0%, rgba(0,0,0,.2) 40%,rgba(0,0,0,.1) 60%, rgba(0,0,0,0) 100%);
+                        display: block; 
+                        position: absolute; 
+                        top:0; 
+                        left: 0; 
+                        width: 100%; 
+                        height:100%;
+                    }
+
+                } //960px & greater
+            }
+    }
+
+    &__logo{
+        img{ display: block; width: 100%; height: auto; max-width: 15rem; margin: 0 auto;
+
+             @media (min-width: $layout-breakpoint-xs) {  max-width: 20rem; } //600px & greater
+        }
+
+        + .recovery-form{ margin-top: 2rem;}
+    }
+
+
+
+
+    md-card {
+        padding: 3rem;
+        width: 100%;
+        margin: 1.5rem 0;
+
+        @media (min-width: $layout-breakpoint-xs) {  margin: 2rem 0; } //600px & greater
+        @media (min-width: $layout-breakpoint-sm) { margin: 2.5rem 0; } //960px & greater
+
+        input {
+            font-size: 16px;
+        }
+        .md-button {
+            background: #1665C1 !important;
+            width: 100%;
+            padding: 3px 0px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .md-button.md-raised[disabled] {
+            background: rgba(0,0,0,0.12) !important;
+
+        }
+
+    }
+
+
+}
+
+
+
+
+//Login Footer
+.login-footer{ text-align: center;
+               &__nav{ 
+                   font-size: 16px;
+                   margin: 0 0 1.5rem 0;
+                   display: block;
+
+                   @media (min-width: $layout-breakpoint-xs) {  margin-bottom: 2rem; } //600px & greater
+                   @media (min-width: $layout-breakpoint-sm) { margin-bottom: 2.5rem; } //960px & greater
+               }
+
+               &__link{ color: $link-color; display: inline-block; cursor: pointer; font-weight: 500;
+                        &:hover, 
+                            &:focus{ color: $link-hover-color; text-decoration: underline;}
+               }
+
+               &__copyright{ font-size: 12px;
+                             p { margin: 0 0 .5rem;
+                                 &:last-child{ margin:0;}
+                             }
+               }
+
+}
+
+
+//Login Instruction
+
+.login-instructions{
+    margin-bottom: 2rem;
+
+    &__title{ 
+        color: $title-color; 
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.005em;
+        margin-bottom: 1rem;
+    }
+}

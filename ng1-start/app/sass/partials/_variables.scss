@@ -1,0 +1,98 @@
+// ---------------------------------------------------------------------------
+// Variables
+
+$body-bg: #eee;
+$off-white: #F7F9FD;
+$black-color: #000;
+$light-blue:#C5CAE9;
+$toolbar-bg: #1665C1;
+$green-color: #5FBA7D;
+
+
+
+
+
+
+
+$text-color: #212121; 
+
+//padding
+$padding-base: 8px;
+
+//mine
+$primary-color:        #1565c0;
+$primary-color-dark:   darken($primary-color, 5%);
+$primary-color-light:  darken($primary-color, 5%);
+
+$primary-color-50: #E3F2FD;
+$primary-color-100:#BBDEFB;
+$primary-color-200:#90CAF9;
+$primary-color-300:#64B5F6;
+$primary-color-400:#42A5F5;
+$primary-color-500:#2196F3;
+$primary-color-600: #1E88E5;
+
+$primary-color-700: #1976D2;
+$primary-color-800: #1565C0;
+$primary-color-900: #0D47A1;
+
+$primary-color-a100:#82B1FF;
+$primary-color-a200:#448AFF;
+$primary-color-a400:#2979FF;
+$primary-color-a700:#2962FF;
+
+//secondary color
+$secondary-color:        #00bfa5;
+$secondary-color-dark:   darken($secondary-color, 5%);
+$secondary-color-light:  lighten($secondary-color, 5%);
+
+$secondary-color-50: #E0F2F1;
+$secondary-color-100:#B2DFDB;
+$secondary-color-200:#80CBC4;
+$secondary-color-300:#4DB6AC;
+$secondary-color-400:#26A69A;
+$secondary-color-500:#009688;
+$secondary-color-600: #00897B;
+
+$secondary-color-700: #00796B;
+$secondary-color-800: #00695C;
+$secondary-color-900: #004D40;
+
+$secondary-color-a100:#A7FFEB;
+$secondary-color-a200:#64FFDA;
+$secondary-color-a400:#1DE9B6;
+$secondary-color-a700:#00BFA5;
+
+
+
+
+
+
+
+//link colors
+$link-color: $primary-color;
+$link-hover-color: $primary-color-dark;
+
+
+$link-color-visited: #6F57B5;
+
+
+
+
+//title color
+$title-color: #111;
+
+
+//breakpoints
+$layout-breakpoint-ns:     400px !default;
+$layout-breakpoint-xs:     600px !default;
+$layout-breakpoint-sm:     960px !default;
+$layout-breakpoint-md:     1280px !default;
+$layout-breakpoint-lg:     1920px !default;
+
+/*
+	@media (min-width: $layout-breakpoint-xs) { background-color: beige;} //600px & greater
+	@media (min-width: $layout-breakpoint-sm) { background-color: red;} //960px & greater
+	@media (min-width: $layout-breakpoint-md) { background-color: blue;} //1280px & greater
+	@media (min-width: $layout-breakpoint-lg) { background-color: green;} //1920px & greater
+*/
