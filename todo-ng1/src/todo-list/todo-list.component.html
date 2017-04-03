@@ -1,0 +1,13 @@
+<div>
+    <select name="user" ng-change="$ctrl.userChange()" ng-model="$ctrl.selected">
+        <option ng-repeat="user in $ctrl.users" value="{{user.id}}">{{user.name}}</option>
+    </select>
+</div>
+<ul>
+  <li ng-repeat="task in $ctrl.tasks">
+    <p>{{task.description}}<p>
+    <p>{{task.done}}</p>
+    <button ng-click="onClick(task)">Edit</button>
+  </li>
+</ul>
+<button ng-click="$ctrl.addTask()">Add Task</button>

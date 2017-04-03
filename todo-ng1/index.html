@@ -5,12 +5,20 @@
     <title>AngularJS Plunker</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
     <link href="style.css" rel="stylesheet" />
-    <script src="https://code.angularjs.org/1.6.0/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular-route.js"></script>
     <script src="src/app.module.js"></script>
     <script src="src/app.config.js"></script>
+    <script src="src/core/core.module.js"></script>
+    <script src="src/core/task/task.module.js"></script>
+    <script src="src/core/task/task.service.js"></script>
+    <script src="src/core/user/user.module.js"></script>
+    <script src="src/core/user/user.service.js"></script>
     <script src="src/todo-create/todo-create.module.js"></script>
     <script src="src/todo-create/todo-create.component.js"></script>
+    <script src="src/todo-list/todo-list.module.js"></script>
+    <script src="src/todo-list/todo-list.component.js"></script>
+    
   </head>
   <body>
       <div ng-view ></div>

@@ -4,15 +4,22 @@ angular.
     module('todoCreate').
     component('todoCreate', {
         templateUrl: 'src/todo-create/todo-create.template.html',
-        controller: ["$scope", function ($scope) {
+        controller: ["$scope", "User", "Task", function ($scope, User, Task) {
             var ctrl = this;
             ctrl.$onInit = function(){
-                console.log("hello")
+                User.getAll().then((data)=>{
+                    $scope.$apply(()=>{
+                        ctrl.users = data;
+                        ctrl.selected = data[0].id + "";
+                        console.log(ctrl.selected.id)
+                    });
+                });
             }
             ctrl.task = {};
-            ctrl.users = {};
+            ctrl.users = [];
+            
             ctrl.createTask = function () {
-                console.log(ctrl.task)
+                ctrl.task.user_id = parseInt(ctrl.selected);
             }
         }]
     });

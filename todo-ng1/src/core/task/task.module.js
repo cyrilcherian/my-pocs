@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('core.task', ['ngResource']);
+angular.module('core.task', []);
