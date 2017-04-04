@@ -7,7 +7,7 @@
   <li ng-repeat="task in $ctrl.tasks">
     <p>{{task.description}}<p>
     <p>{{task.done}}</p>
-    <button ng-click="onClick(task)">Edit</button>
+    <button ng-click="$ctrl.editTask(task.id)">Edit</button>
   </li>
 </ul>
 <button ng-click="$ctrl.addTask()">Add Task</button>

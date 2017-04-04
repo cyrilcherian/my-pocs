@@ -33,5 +33,9 @@ angular.
             ctrl.addTask = function() {
                 $location.path( "/todo-create" );
             }
+            ctrl.editTask = function(id) {
+                $location.path( "/todo-edit/" + id );
+            }
+
         }]
     });
