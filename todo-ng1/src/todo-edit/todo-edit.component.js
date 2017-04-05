@@ -8,7 +8,7 @@ angular.
             var ctrl = this;
             ctrl.task = {};
             ctrl.users = [];
-            ctrl.$onInit = function(){
+            ctrl.$onInit = function() {
                 User.getAll().then((data)=>{
                     $scope.$apply(()=>{
                         ctrl.users = data;

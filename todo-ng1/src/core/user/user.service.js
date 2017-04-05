@@ -2,7 +2,7 @@
 
 angular.
     module('core.user').
-    factory('User', ['$http','$timeout',
+    factory('User', ['$http', '$timeout',
         function ($http, $timeout) {
             var users = [{ "id": 1, "name": "Cyril" },
             { "id": 2, "name": "Sreeragh" },
@@ -10,10 +10,21 @@ angular.
             return ({
                 get: get,
                 getAll: getAll,
-                add: add
+                add: add,
+                getTest: getTest
             });
-            
 
+            function getTest() {
+                $http({
+                    method: 'GET',
+                    url: 'http://10.4.3.236:8183/order/customer/1/product/2?amount=100'
+                }).then(function successCallback(response) {
+                    console.log(response);
+                }, function errorCallback(response) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
+            }
             function getAll() {
                 let p = new Promise((resolve) =>
                     $timeout(() => resolve(users), 1000)
