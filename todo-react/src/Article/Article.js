@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import review from '../Store/Review';
 import './Article.css';
+
 class Article extends Component {
   movieEditReview(movie) {
     console.log(movie);
@@ -18,7 +20,7 @@ class Article extends Component {
           </thead>
           <tbody>
           {
-            this.props.movies.map((movie) =>
+            review.getState().map((movie) =>
               <tr key={movie.name}>
                 <td>{movie.name}</td>
                 <td>{movie.review}</td>
@@ -32,6 +34,7 @@ class Article extends Component {
         <button>Add New Review</button>
       </article>);
   }
+
 }
 
 export default Article;

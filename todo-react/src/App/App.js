@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Nav from '../Nav/Nav';
-import Article from '../Article/Article';
-import Constant from '../Constant';
+import Home from '../Home/Home';
+import Edit from '../Edit/Edit';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.nav = [Constant.SUPER_HIT, Constant.HIT, Constant.AVERAGE, Constant.FLOP];
-    this.movies = [{ name: "Bahubali-The Beginneing", review: Constant.HIT },
-    { name: "Bahubali-The Conclusion", review: Constant.SUPER_HIT },
-    { name: "Magadheera", review: Constant.HIT },
-    { name: "Titanic", review: Constant.HIT },
-    { name: "Sixth Sense", review: Constant.FLOP },
-    { name: "Arundhati", review: Constant.AVERAGE }];
-  }
   render() {
     return (
-      <div>
-        <Header>Review World</Header>
-        <Nav reviews={this.nav}></Nav>
-        <Article movies={this.movies}></Article>
-        <Footer>Powered by cyril</Footer>
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/edit" component={Edit} />
+        </div>
+      </Router>
     );
   }
 }
