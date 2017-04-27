@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import { Provider } from 'react-redux';
-import './Edit.css';
+import './EditRemote.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import SyncValidationForm from './EditForm';
-import store from '../Store/Edit';
+import SyncValidationForm2 from './EditRemoteForm';
+import store from '../Store/EditRemote';
 
 const handle = (values)=>{console.log(values, store.getState())};
-class Edit extends Component {
+class EditRemote extends Component {
   render() {
     return (
       <div>
         <Provider store={store}>
           <div style={{ padding: 15 }}>
-            <SyncValidationForm onSubmit={handle}/>
+            <SyncValidationForm2 onSubmit={handle}/>
           </div>
         </Provider>
       </div>
@@ -21,4 +21,4 @@ class Edit extends Component {
   }
 }
 
-export default Edit;
+export default EditRemote;

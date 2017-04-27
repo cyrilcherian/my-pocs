@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import { Provider } from 'react-redux';
-import './Edit.css';
+import './Add.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import SyncValidationForm from './EditForm';
+import SyncValidationForm1 from './AddForm';
 import store from '../Store/Edit';
 
-const handle = (values)=>{console.log(values, store.getState())};
-class Edit extends Component {
+const handle = (values)=>{console.log(values)};
+class Add extends Component {
   render() {
     return (
       <div>
         <Provider store={store}>
           <div style={{ padding: 15 }}>
-            <SyncValidationForm onSubmit={handle}/>
+            <SyncValidationForm1 onSubmit={handle}/>
           </div>
         </Provider>
       </div>
@@ -21,4 +21,4 @@ class Edit extends Component {
   }
 }
 
-export default Edit;
+export default Add;
