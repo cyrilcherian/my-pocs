@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import { Provider } from 'react-redux';
-import './EditRemote.css';
+import './DualList.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import SyncValidationForm2 from './EditRemoteForm';
-import store from '../Store/EditRemote';
+import SyncValidationForm4 from './DualListForm';
+import store from '../Store/DualList';
 
 const handle = (values)=>{console.log(values, store.getState())};
-class EditRemote extends Component {
+class DualList extends Component {
   render() {
     console.log(this.props.location.pathname);
     return (
       <div>
         <Provider store={store}>
           <div style={{ padding: 15 }}>
-            <SyncValidationForm2 onSubmit={handle}/>
+            <SyncValidationForm4 onSubmit={handle}/>
           </div>
         </Provider>
       </div>
@@ -22,4 +22,4 @@ class EditRemote extends Component {
   }
 }
 
-export default EditRemote;
+export default DualList;

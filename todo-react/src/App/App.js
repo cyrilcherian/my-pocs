@@ -11,7 +11,8 @@ import Product from '../Product/Product';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
-
+import DualList from '../DualList/DualList';
+import Tabs from '../Tabs/Tabs';
 
 const SuperHit = () => ( <Product><div>Hi Superhit</div></Product>);
 const Hit = () => ( <Product><div>Hi hit</div></Product>);
@@ -41,6 +42,8 @@ class App extends Component {
             <Route  path="/product/flop" component={Flop} />
             <Route  path="/product/average" component={Add} />
             <Route  path="/login" component={Login} />
+            <Route  path="/dual/:test" component={DualList} />
+            <Route  path="/tabs" component={Tabs} />
           </div>
         </Router>
         <Footer>Powered by cyril</Footer>
